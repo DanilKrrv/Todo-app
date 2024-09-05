@@ -6,7 +6,7 @@ import darkBackgroundImage from "./assets/bg-desktop-dark.jpg";
 import Header from './Components/Header';
 import InputButton from './Components/inputButton';
 import { v4 } from 'uuid';
-import { addTodo, deleteTodo, fetchTodos, markTodoCompleted, countCompletedTodos, clearAllCompletedTodos } from './actions/index.js';
+import { addTodo, deleteTodo, fetchTodos, markTodoCompleted, countCompletedTodos, clearAllCompletedTodos, getActiveTodos, getCompletedTodos } from './actions/index.js';
 import TodoList from './Components/TodoList.jsx';
 import StatusBar from './Components/StatusBar.jsx';
 
@@ -48,7 +48,21 @@ function App() {
     fetchTodos().then((data) => {
       setTodos(data);
     });
-  }
+  };
+
+  const handleAllClick = async () => {
+    fetchTodos().then((data) => {
+      setTodos(data);
+    });
+  };
+
+  const handleActiveClick = async () => {
+    getActiveTodos().then(todos => setTodos(todos));
+  };
+
+  const handleCompletedClick = async () => {
+    getCompletedTodos().then(todos => setTodos(todos))
+  };
 
   useEffect(() => {
     fetchTodos().then((data) => {
@@ -69,7 +83,7 @@ function App() {
         backgroundSize={"cover"}
         h={"40vh"}
       >
-        <Box w={{ base: '60%', md: '80%', lg: '90' }} p='4em 0' m='auto'>
+        <Box w={{ base: '80%', md: '60%', lg: '40%' }} p='4em 0' m='auto'>
           <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
           <InputButton
             colorMode={colorMode}
@@ -86,7 +100,7 @@ function App() {
         position={'relative'}
       >
         <Box minW={'100%'} m={'auto'} position={'absolute'} top={'-10'}>
-          <Box w={{ base: '60%', md: '80%', lg: '90' }} m={'auto'}>
+          <Box w={{ base: '80%', md: '60%', lg: '40%' }} m={'auto'}>
             <Box maxH={'50vh'} overflowY={'auto'} borderTopRadius={'10px'} backgroundColor={colorMode == 'light' ? "white" : '#1a202c'} >
               <TodoList
                 todos={todos}
@@ -98,6 +112,9 @@ function App() {
                 colorMode={colorMode}
                 itemLeft={itemLeft}
                 handleClearAllTodo={handleClearAllTodo}
+                handleAllClick={handleAllClick}
+                handleActiveClick={handleActiveClick}
+                handleCompletedClick={handleCompletedClick}
               />
             </Box>
           </Box>

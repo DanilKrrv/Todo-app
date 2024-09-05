@@ -2,23 +2,23 @@
   "data": {
     "todos": [
       {
-        "id": "21299cfc-7fb0-464a-b4ae-0a4dd70114d2",
-        "title": "34",
+        "id": "aa0a489f-8f45-47c6-8c0c-3a314239ebfb",
+        "title": "43",
+        "isCompleted": true
+      },
+      {
+        "id": "a2f70432-bec3-4b67-9b5d-e1b68e5a0bb3",
+        "title": "12",
+        "isCompleted": false
+      },
+      {
+        "id": "ad478356-ed80-4274-afad-2a3fd30a3a35",
+        "title": "1",
         "isCompleted": false
       },
       {
         "id": "0ff4e47c-b8b9-406b-9f43-034efa6cd978",
         "title": "23",
-        "isCompleted": false
-      },
-      {
-        "id": "17c14a4a-2a67-410e-9a39-93b6d509f712",
-        "title": "12",
-        "isCompleted": false
-      },
-      {
-        "id": "6c8c122c-dca6-4314-80e9-1ae2cdc42ef3",
-        "title": "1",
         "isCompleted": false
       }
     ]

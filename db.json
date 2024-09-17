@@ -2,23 +2,18 @@
   "data": {
     "todos": [
       {
-        "id": "aa0a489f-8f45-47c6-8c0c-3a314239ebfb",
-        "title": "43",
+        "id": "c1781de4-f792-42f9-af37-0f7e0aba93dd",
+        "title": "Учить javascript",
         "isCompleted": true
       },
       {
-        "id": "a2f70432-bec3-4b67-9b5d-e1b68e5a0bb3",
-        "title": "12",
+        "id": "718c714c-b6e6-4344-bfb9-0b17d484c538",
+        "title": "Смотреть YouTube",
         "isCompleted": false
       },
       {
-        "id": "ad478356-ed80-4274-afad-2a3fd30a3a35",
-        "title": "1",
-        "isCompleted": false
-      },
-      {
-        "id": "0ff4e47c-b8b9-406b-9f43-034efa6cd978",
-        "title": "23",
+        "id": "810700a7-65bf-402a-9725-215335e38aa9",
+        "title": "Читать книги",
         "isCompleted": false
       }
     ]

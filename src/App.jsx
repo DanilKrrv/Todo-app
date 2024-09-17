@@ -101,12 +101,13 @@ function App() {
       >
         <Box minW={'100%'} m={'auto'} position={'absolute'} top={'-10'}>
           <Box w={{ base: '80%', md: '60%', lg: '40%' }} m={'auto'}>
-            <Box maxH={'50vh'} overflowY={'auto'} borderTopRadius={'10px'} backgroundColor={colorMode == 'light' ? "white" : '#1a202c'} >
+            <Box maxH={'50vh'} overflowY={'auto'} borderRadius={'10px'} backgroundColor={colorMode == 'light' ? "white" : '#1a202c'} >
               <TodoList
                 todos={todos}
                 colorMode={colorMode}
                 handleCompletedTodo={handleCompletedTodo}
                 handleDeleteTodo={handleDeleteTodo}
+                setTodos={setTodos}
               />
               <StatusBar
                 colorMode={colorMode}
